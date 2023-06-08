@@ -1,0 +1,81 @@
+header{
+height: 100vh;
+background-image : url(https://www.hindnews7.com/wp-content/uploads/2023/02/we-have-a-ghost-wide.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+.header_content{
+    margin-left :5vw;
+    padding-top: 15vw;
+
+}
+header.img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.header_billboard{
+
+    display:none;
+    object-fit: cover;
+    position: relative;
+    left: 1vw;
+    top: 50vh;
+    z-index:2;
+}
+.header_desc{
+    width: 50%;
+    height: 10vh;
+    color: white;
+    font-size: 1.1vw;
+    font-weight: 500;
+    text-shadow: 2px,2px,4px,black;
+    margin-bottom:0.5;
+    z-index: 2;
+    position: relative;
+    bottom : 8vw;
+}
+.header_buttons{
+    display:flex;
+    align-items: center;
+    margin-top: 1.5vw;
+ z-index: 2;
+ position: relative;
+ top: 10vw;
+}
+.header_button{
+    font-weight: 600px;
+    padding: 0.7rem;
+    padding-left: 2rem;
+    padding-right: 2.5rem;
+    font-size:1.2rem;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.play_button{
+ margin-right: 1rem;
+}
+.play_button:hover{
+    background-color: #e6e6e6;
+}
+.more_info{
+    background-color: grey;
+}
+.more_info:hover{
+    background-color:white;
+}
+.header_inner_shadow{
+    z-index: 0;
+position: absolute;
+top:0;
+left: 0;
+height: 100%;
+width: 100%;
+background: linear-gradient(0deg, rgba(20,20,20,0.01) 0%, rgba(20,20,20,0) 100%);
+
+}

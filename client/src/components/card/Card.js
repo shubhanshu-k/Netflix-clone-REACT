@@ -17,18 +17,23 @@ export default function Card(props) {
   const youtubeUrl=`https://www.youtube.com/embed/`;
   const fetchURL =async ()=>{
     try{
-    const response =await axios.get(`/movie/${props.id}/videos`);
-   if(response.data.videos.results.length>0){
+    const response =await axios.get(`/movie/${props.id}`,{
+      params:{
+        append_to_response:'videos',
+      },
+    }); 
+   if(response.data.videos.results.length>0){ 
     setVideo(response.data.videos.results[0].key);
+    console.log(response.data.videos.results[0].key);
    }
-}
+} //ek baari jo usne soltuon bty hai wo t ha wait ye fucntionality hta du kya? vaisi
 catch(e){
     console.log(e);
 }
   }
   useEffect(() => {
     fetchURL();
-  }, [])
+  });
   
   console.log(imageUrl);  
   return (
@@ -38,7 +43,7 @@ catch(e){
     >
        {!isHovered ?( <img className='card_poster' alt='poster' src={imageUrl}/>
    ): (<iframe
-   allowFullScreen
+  allowFullScreen
    allow='accelerometer;autoplay;clipboard-write; encrypted-media; gyroscope;'
    title='Youtube Video Player'
    width='100%'

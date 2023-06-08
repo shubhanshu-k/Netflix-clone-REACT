@@ -19,6 +19,7 @@ export default function Card(props) {
     try{
     const response =await axios.get(`/movie/${props.id}`,{
       params:{
+        limit:'10',
         append_to_response:'videos',
       },
     }); 

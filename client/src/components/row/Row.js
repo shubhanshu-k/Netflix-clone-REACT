@@ -15,7 +15,7 @@ limit:10
     useEffect(() => {
     fetchMovies();  
       
-    }, [])
+    });
     
   return (
     <div className='row_wrapper'>
